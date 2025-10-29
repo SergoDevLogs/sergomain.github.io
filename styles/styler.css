@@ -7,6 +7,14 @@
     font-family: 'myFont', sans-serif;
 }
 
+body{
+    position: relative;
+}
+
+html{
+    min-width: 400px;
+}
+
 @font-face {
     font-family: 'myFont';
     src: url('./../fonts/ChakraPetch-Bold.ttf') format('truetype');
@@ -15,6 +23,14 @@
 @font-face {
     font-family: 'mainFont';
     src: url('./../fonts/ChakraPetch-Light.ttf') format('truetype');
+}
+
+p{
+    font-family: 'mainFont', 'sans-serif';
+}
+
+.overdo{
+    font-family: 'myFont', 'sans-serif';
 }
 
 header{
@@ -72,8 +88,8 @@ button{
 }
 
 .maincontent{
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 80px;
+    padding-right: 80px;
     align-items: center;
 }
 
@@ -178,6 +194,7 @@ button{
     display: grid;
     grid-template-columns: 1fr 1fr;
     border-radius: 1px;
+    margin-bottom: 50px;
 }
 
 .main-subscribe-advert{
@@ -191,14 +208,240 @@ button{
 }
 
 .main-subscribe-email{
+    padding-right: 10%;
+    align-self: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    justify-self: end;
+    background: #FFFFFF12;
+    width:fit-content;
+    height: 56px;
+    padding: 0 16px;
+    gap:16px; 
+}
+
+.main-subscribe-email-logo{
+    font-size: 16px;
+    background-color: transparent;
+}
+
+.main-subscribe-email-send{
+    width: 50px;
+    height: 50px;
+    background-color: #FFFFFF36;
+    align-self: center;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: transparent;
 }
 
+.main-subscribe-email-send-logo{
+    background-color: transparent;
+}
 
+.mostbottom {
+    padding-top: 150px;
+    height: 250px;
+    margin: 0 80px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    background: linear-gradient(.25turn, #00ddff, #ff00dd) bottom no-repeat;
+    background-size: 100% 1px;
+    padding-bottom: 8px;
+}
+
+.mostbottom-left {
+    display: flex;
+    flex-direction: column;
+}
+
+.mostbottom-logo {
+    display: grid;
+    grid-template-columns: 30px 59px;
+    height: 30px;
+    gap: 4px;
+    align-items: center;
+}
+
+.mostbottom-networks {
+    margin-top: 100px;
+    display: flex;
+    gap: 12px;
+}
+
+.mostbottom-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: start;
+}
+
+.mostbottom-info-quicklinks,
+.mostbottom-info-support,
+.mostbottom-info-needhelp {
+    display: grid;
+    gap: 16px;
+    text-align: left;
+}
+
+.mostbottom-info-quicklinks {
+    grid-template-rows: repeat(6, auto);
+    justify-items: start;
+}
+
+.mostbottom-info-support {
+    grid-template-rows: repeat(6, auto);
+    justify-items: start;
+    text-align: left;
+}
+
+.mostbottom-info-needhelp {
+    grid-template-rows: repeat(4, auto);
+    justify-items: start;
+    text-align: left;
+}
+
+.copyright{
+    margin-top: 40px;
+    text-align: center;
+    font-family: 'mainFont', 'sans-serif';
+    padding-bottom: 40px;
+}
+
+.corner-wave-top-right,
+.corner-wave-bottom-left {
+    position: absolute;
+    z-index: 0;
+    width: 35%;
+    pointer-events: none;
+    background-color: transparent;
+}
+
+.corner-wave-top-right {
+    top: 0;
+    right: 0;
+    object-fit: contain;
+}
+
+.corner-wave-bottom-left {
+    bottom: 0;
+    left: 0;
+    object-fit: contain;
+}
 
 @media screen and (max-width: 1200px) {
-    
+    .main-devices {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(9, 1fr);
+        gap: 20px;
+        row-gap: 40px;
+        margin-bottom: 40px;
+    }
+
+    .header-layout-buttons {
+        visibility: collapse;
+    }
+
+    .header-layout {
+        padding: 20px 60px;
+    }
+
+    .contact-button {
+        z-index: 1;
+        background: none;
+        border: none;
+        padding: 0;
+        width: 50px;
+        height: 50px;
+        background-image: url('./../images/frame.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        color: transparent;               
+        font-size: 0;                     
+    }
+
+    .maincontent {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .main-subscribe {
+        grid-template-columns: 1fr;
+        height: auto;
+        padding: 20px;
+        text-align: center;
+        gap: 24px;
+    }
+
+    .main-subscribe-advert {
+        width: auto;
+        padding: 0;
+        font-size: 32px;
+    }
+
+    .main-subscribe-email {
+        justify-content: center;
+        justify-self: center;
+        gap: 12px;
+        padding: 0 12px;
+    }
+
+    .mostbottom {
+        grid-template-columns: 1fr;
+        height: auto;
+        margin: 0 40px;
+        padding-top: 100px;
+        padding-bottom: 50px;
+    }
+
+    .mostbottom-left{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .mostbottom-networks{
+        margin: 0;
+    }
+
+    .mostbottom-info {
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+        margin-top: 40px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .header-layout {
+        grid-template-columns: 1fr auto;
+        text-align: left;
+        padding: 20px;
+    }
+
+    .header-layout-buttons {
+        display: none;
+    }
+
+    .main-current-logo {
+        font-size: 48px;
+    }
+
+    .main-current-page {
+        font-size: 14px;
+        margin-top: 30px;
+        margin-bottom: 60px;
+    }
+
+    .main-devices {
+        grid-template-rows: repeat(9, auto);
+        row-gap: 30px;
+    }
+
+    .main-subscribe-advert {
+        font-size: 24px;
+    }
+
+    .main-buttons {
+        grid-template-columns: repeat(3, 50px);
+        margin-bottom: 100px;
+    }
 }
